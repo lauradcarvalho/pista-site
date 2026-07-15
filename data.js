@@ -8,9 +8,10 @@ const FORM_LINKS = {
 
 // Edite esta lista sempre que aprovar um evento no Notion (marcar "Publicado no site").
 const events = [
-  {id:'e1', day:'15', month:'AGO', title:'Racha 51 No Prep', type:'drag', local:'Autódromo FuelTech Velopark, Nova Santa Rita/RS', horario:'', fonte:'Instagram', confirmado:true, lineup:[]},
+  {id:'e1', day:'25', month:'JUL', title:'Top Street RS', type:'drag', local:'Autódromo de Tarumã, Viamão/RS', horario:'', fonte:'Instagram', confirmado:true, lineup:[]},
   {id:'e2', day:'31', month:'JUL', title:'3ª Etapa Copa FT BR Sport de Arrancada', type:'drag', local:'Autódromo FuelTech Velopark, Nova Santa Rita/RS', horario:'', fonte:'pascoaldragster.com', confirmado:true, lineup:[]},
-  {id:'e3', day:'30', month:'OUT', title:'Armageddon', type:'drag', local:'Autódromo FuelTech Velopark, Nova Santa Rita/RS', horario:'', fonte:'Instagram', confirmado:true, lineup:[]},
+  {id:'e3', day:'15', month:'AGO', title:'Racha 51 No Prep', type:'drag', local:'Autódromo FuelTech Velopark, Nova Santa Rita/RS', horario:'', fonte:'Instagram', confirmado:true, lineup:[]},
+  {id:'e4', day:'30', month:'OUT', title:'Armageddon', type:'drag', local:'Autódromo FuelTech Velopark, Nova Santa Rita/RS', horario:'', fonte:'Instagram', confirmado:true, lineup:[]},
 ];
 
 // Edite esta lista sempre que aprovar um cadastro de pilota/equipe no Notion.
