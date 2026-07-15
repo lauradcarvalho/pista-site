@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilotas — PISTA RS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <div class="word">PISTA</div>
+    <div class="tag">RS</div>
+  </a>
+  <nav id="main-nav">
+    <a href="index.html#agenda">Agenda</a>
+    <a class="active" href="pilotas.html">Pilotas</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+  <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('main-nav').classList.toggle('mobile-open')">
+    <svg width="16" height="12" viewBox="0 0 16 12"><rect width="16" height="2" fill="#141414"/><rect y="5" width="16" height="2" fill="#141414"/><rect y="10" width="16" height="2" fill="#141414"/></svg>
+  </button>
+</header>
+<div class="gradient-bar"></div>
+
+<div class="page-header">
+  <h1>PILOTAS &amp; EQUIPES</h1>
+  <p>Quem está correndo no RS, contado por quem corre. Cada perfil aqui foi criado pela própria pilota ou equipe — ninguém é listado sem ter escolhido isso.</p>
+</div>
+
+<main>
+  <section class="section">
+    <div class="section-head">
+      <h2>TODAS AS PILOTAS</h2>
+      <span class="section-count" id="people-count"></span>
+    </div>
+    <div class="pilots-scroll" id="people-list"></div>
+    <button class="btn-outline" style="margin-top:16px;" onclick="window.open(FORM_LINKS.criarPerfil, '_blank')">+ Criar meu perfil</button>
+  </section>
+</main>
+
+<footer>
+  <div>PISTA © 2026</div>
+  <div>RIO GRANDE DO SUL</div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  renderPeople('people-list', 'people-count');
+</script>
+
+</body>
+</html>

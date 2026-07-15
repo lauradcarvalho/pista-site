@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre — PISTA RS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <div class="word">PISTA</div>
+    <div class="tag">RS</div>
+  </a>
+  <nav id="main-nav">
+    <a href="index.html#agenda">Agenda</a>
+    <a href="pilotas.html">Pilotas</a>
+    <a class="active" href="sobre.html">Sobre</a>
+  </nav>
+  <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('main-nav').classList.toggle('mobile-open')">
+    <svg width="16" height="12" viewBox="0 0 16 12"><rect width="16" height="2" fill="#141414"/><rect y="5" width="16" height="2" fill="#141414"/><rect y="10" width="16" height="2" fill="#141414"/></svg>
+  </button>
+</header>
+<div class="gradient-bar"></div>
+
+<div class="page-header">
+  <h1>SOBRE A PISTA</h1>
+</div>
+
+<main>
+  <section class="section">
+    <div class="sobre-body">
+      <p>A PISTA nasceu de uma pesquisa sobre um problema muito específico: mulheres que amam motorsport no Rio Grande do Sul enfrentam barreiras reais pra ocupar esse espaço — a mais citada, de longe, é o comentário machista. A ideia começou como um projeto acadêmico e virou vontade de construir algo que realmente ajudasse.</p>
+      <p>Sou designer e pesquisadora, e no momento estou desenvolvendo meu TCC sobre mulheres como espectadoras do automobilismo. Mas minha relação com o esporte vem de antes da pesquisa, não o contrário: sou espectadora de motorsport, e sempre reparei em ver muitos homens no autódromo — e sentir falta de saber quais pilotas mulheres estavam competindo. A PISTA nasceu dessa vontade pessoal, não só da pesquisa acadêmica.</p>
+      <p>Sou movida por curiosidade: gosto de explorar até onde uma ideia pode ir, inclusive usando IA como parte desse processo de investigação e construção.</p>
+      <p class="sobre-disclaimer">A PISTA não é projeto de empresa, não é monetizada, e não representa nenhuma instituição ou federação. É uma plataforma independente, desenvolvida a partir de pesquisa e estudo pessoal.</p>
+      <p><strong>Como funciona:</strong> os eventos vêm de fontes públicas checadas manualmente, mais sugestões da comunidade — tudo revisado antes de ir ao ar. Pilotas e equipes criam o próprio perfil quando querem aparecer; ninguém é listado sem ter escolhido isso.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>PISTA © 2026</div>
+  <div>RIO GRANDE DO SUL</div>
+</footer>
+
+<script src="data.js"></script>
+
+</body>
+</html>

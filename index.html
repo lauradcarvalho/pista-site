@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PISTA — Agenda de Arrancada &amp; Drift RS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <div class="word">PISTA</div>
+    <div class="tag">RS</div>
+  </a>
+  <nav id="main-nav">
+    <a class="active" href="index.html#agenda" onclick="document.getElementById('main-nav').classList.remove('mobile-open')">Agenda</a>
+    <a href="pilotas.html">Pilotas</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+  <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('main-nav').classList.toggle('mobile-open')">
+    <svg width="16" height="12" viewBox="0 0 16 12"><rect width="16" height="2" fill="#141414"/><rect y="5" width="16" height="2" fill="#141414"/><rect y="10" width="16" height="2" fill="#141414"/></svg>
+  </button>
+</header>
+<div class="gradient-bar"></div>
+
+<div class="hero">
+  <div>
+    <div class="eyebrow">Calendário oficial · RS</div>
+    <h1>PISTA RIO<br>GRANDE DO SUL</h1>
+    <p>Arrancada e drift, data, local e categoria em um só lugar — com espaço garantido pras pilotas mostrarem quem manda na pista.</p>
+    <div class="hero-actions">
+      <button class="btn-solid" onclick="document.getElementById('agenda').scrollIntoView({behavior:'smooth'})">Ver agenda</button>
+      <a class="btn-outline" href="pilotas.html">Pilotas em destaque</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="images/hero-camaro.jpg" alt="Camaro ZL1 turbinado com capô aberto, evento de arrancada">
+    <div class="tape"></div>
+  </div>
+</div>
+
+<main>
+
+  <section class="section" id="agenda">
+    <div class="section-head">
+      <h2>PRÓXIMOS EVENTOS</h2>
+      <span class="section-count" id="event-count"></span>
+    </div>
+    <div class="filters" id="filters">
+      <button class="active" data-filter="all">Todos</button>
+      <button data-filter="drag">Arrancada</button>
+      <button data-filter="drift">Drift</button>
+    </div>
+    <div id="event-list"></div>
+  </section>
+
+  <section class="section" id="pilotas">
+    <div class="section-head">
+      <h2>PILOTAS EM DESTAQUE</h2>
+      <span class="section-count" id="people-count"></span>
+    </div>
+    <div class="pilots-scroll" id="people-list"></div>
+    <button class="btn-outline" style="margin-top:16px;" onclick="window.open(FORM_LINKS.criarPerfil, '_blank')">+ Criar meu perfil</button>
+  </section>
+
+  <div class="callout">
+    <h3>Cada evento aqui passa por checagem de verdade.</h3>
+    <p>Eventos e perfis entram aqui por checagem manual. Sugestões da comunidade passam por validação antes de ir ao ar.</p>
+    <button onclick="window.open(FORM_LINKS.sugerirEvento, '_blank')">Sugerir evento</button>
+  </div>
+
+</main>
+
+<footer>
+  <div>PISTA © 2026</div>
+  <div>RIO GRANDE DO SUL</div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  wireFilters();
+  renderEvents();
+  renderPeople('people-list', 'people-count');
+</script>
+
+</body>
+</html>
