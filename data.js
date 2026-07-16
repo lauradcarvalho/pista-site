@@ -18,7 +18,9 @@ const events = [
 // Campos: id, name, role (equipe/categoria), cat (texto curto tipo "ARRANCADA"),
 // bio (opcional, aparece no modal), instagram (opcional, aparece no modal).
 // Exemplo: {id:'p1', name:'Nome da Pilota', role:'Equipe X', cat:'ARRANCADA', bio:'Breve histórico.', instagram:'@perfil'}
-const people = [];
+const people = [
+  {id:'p1', name:'Driely Quoos', role:'Categoria TST — Chevette Tubarão Vermelho', cat:'ARRANCADA', bio:'Piloto de arrancada, esposa de piloto e mãe de piloto também. Única mulher na categoria TST por enquanto, melhor tempo até agora: 5,6s nos 200m. Compete no Autódromo FuelTech Velopark (Nova Santa Rita/RS) e em etapas na SPID (Itatiba/SP).', instagram:'@drielyquoos_tst944'},
+];
 
 function findPerson(id){ return people.find(p => p.id === id); }
 function eventsForPerson(id){ return events.filter(e => e.lineup.some(l => l.riders.includes(id))); }
