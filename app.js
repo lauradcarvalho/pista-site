@@ -40,9 +40,10 @@ function renderPeople(containerId='people-list', countId='people-count', limit=n
   }
   list.innerHTML = shown.map(p => {
     const upcoming = eventsForPerson(p.id);
+    const photoHtml = p.photo ? `<div class="pilot-photo"><img src="${p.photo}" alt="${p.name}"></div>` : '';
     return `
     <div class="pilot-card" onclick="openPersonModal('${p.id}')">
-      <div class="pilot-photo">FOTO — PILOTA</div>
+      ${photoHtml}
       <div class="pilot-info">
         <div class="pilot-name">${p.name}</div>
         <div class="pilot-team">${p.role}</div>
@@ -131,7 +132,7 @@ function openPersonModal(id){
 
   document.getElementById('modal-card').className = 'modal-card';
   document.getElementById('modal-body').innerHTML = `
-    <div class="modal-photo">FOTO — PILOTA</div>
+    ${p.photo ? `<div class="modal-photo"><img src="${p.photo}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;"></div>` : ''}
     <div class="modal-eyebrow">${p.role}</div>
     <div class="modal-title">${p.name}</div>
     <div class="modal-sub mono" style="color:var(--cyan);text-transform:uppercase;">${p.cat}</div>

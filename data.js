@@ -16,10 +16,13 @@ const events = [
 
 // Edite esta lista sempre que aprovar um cadastro de pilota/equipe no Notion.
 // Campos: id, name, role (equipe/categoria), cat (texto curto tipo "ARRANCADA"),
-// bio (opcional, aparece no modal), instagram (opcional, aparece no modal).
-// Exemplo: {id:'p1', name:'Nome da Pilota', role:'Equipe X', cat:'ARRANCADA', bio:'Breve histórico.', instagram:'@perfil'}
+// bio (opcional, aparece no modal), instagram (opcional, aparece no modal),
+// photo (opcional — caminho tipo 'images/nome-da-pilota.jpg'; sem essa foto pronta
+// ainda, é só não incluir o campo que o espaço de imagem some sozinho, sem placeholder).
+// Exemplo: {id:'p1', name:'Nome da Pilota', role:'Equipe X', cat:'ARRANCADA', bio:'Breve histórico.', instagram:'@perfil', photo:'images/nome.jpg'}
 const people = [
   {id:'p1', name:'Driely Quoos', role:'Categoria TST — Chevette Tubarão Vermelho', cat:'ARRANCADA', bio:'Piloto de arrancada, esposa de piloto e mãe de piloto também. Única mulher na categoria TST por enquanto, melhor tempo até agora: 5,6s nos 200m. Compete no Autódromo FuelTech Velopark (Nova Santa Rita/RS) e em etapas na SPID (Itatiba/SP).', instagram:'@drielyquoos_tst944'},
+  {id:'p2', name:'Sheila Opaleira', role:'Arrancada — Opala', cat:'ARRANCADA', bio:'Apaixonada por Opalas e arrancada.', instagram:'@sheila_opaleira'},
 ];
 
 function findPerson(id){ return people.find(p => p.id === id); }

@@ -131,8 +131,10 @@ main{padding:0 20px;max-width:1200px;margin:0 auto;}
 .callout p{color:var(--muted);font-size:12.5px;line-height:1.6;margin:0 0 16px;max-width:480px;}
 .callout button{background:var(--cyan);border:none;color:#141414;font:700 12px 'IBM Plex Mono',monospace;text-transform:uppercase;padding:13px 20px;cursor:pointer;}
 
-footer{padding:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font:600 10px 'IBM Plex Mono',monospace;color:var(--muted-2);margin-top:20px;}
+footer{padding:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font:600 10px 'IBM Plex Mono',monospace;color:var(--muted-2);margin-top:20px;}
 footer a{color:inherit;text-decoration:none;}
+footer a:hover{color:var(--lime);}
+.footer-contact{display:flex;gap:10px;flex-wrap:wrap;}
 
 /* ---------- Modal ---------- */
 .ev-row,.pilot-card{cursor:pointer;transition:background .15s ease;}
